@@ -12,6 +12,9 @@ const connect_mongodb = require("connect-mongodb-session")(session);
 const console_controller = require("./controllers/console");
 const error_controller = require("./controllers/error");
 
+const auth_router = require('./routes/auth');
+const main_router = require('./routes/main');
+
 const app = express();
 const store = new connect_mongodb({
     uri : DATABASE_URI, 
@@ -25,12 +28,13 @@ app.use(body_parser.urlencoded({extended : false}));
 app.use(express.static(path.join(path.dirname(require.main.filename), 'public')));
 app.use(session({secret : "mysecret", saveUninitialized : false, resave : false ,store : store}));
 
-
 app.use(console_controller.LOG_Request);
+
+app.use(auth_router);
+app.use(main_router);
 
 app.use(console_controller.LOG_Not_Found);
 app.use(error_controller.SEND_ERROR);
-
 
 mongoose.connect(DATABASE_URI).then(function(result)
 {
