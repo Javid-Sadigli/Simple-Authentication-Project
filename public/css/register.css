@@ -1,0 +1,27 @@
+.sign_up_form{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 700px;
+    height: 300px;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+label{
+    width: 200px;
+}
+.input_div{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+.sign_up_input{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+}

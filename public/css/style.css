@@ -11,10 +11,33 @@ img{
 }
 a{
     text-decoration: none;
+    color: black;
 }
 ul{
     list-style: none;
 }
 body{
+    font-size: 20px;
     padding: 10px;
+}
+.page_header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.navbar_list{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.profile_icon{
+    width: 80px;
+    height: 80px;
+}
+.navbar_logo_a{
+    color: black;
+}
+input{
+    font-size: 16px;
 }

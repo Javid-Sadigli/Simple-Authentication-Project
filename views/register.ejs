@@ -1,0 +1,22 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+    <%- include('includes/navbar.ejs') %>
+
+    <main>
+        <form action="/register" method="post" class="sign_up_form">
+            <div class="email_div input_div">
+                <label for="email">Email : </label><input type="email" name="email" id="email" class="sign_up_input" placeholder="Enter your email">
+            </div>
+            <div class="username_div input_div">
+                <label for="username">Username : </label><input type="text" name="username" id="username" class="sign_up_input" placeholder="Enter your username">
+            </div>
+            <div class="password_div input_div">
+                <label for="password">Password : </label><input type="password" name="password" id="password" class="sign_up_input" placeholder="Enter your password" >
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </main>
+</body>
+</html>
