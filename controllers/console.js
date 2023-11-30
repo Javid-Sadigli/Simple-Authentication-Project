@@ -23,8 +23,3 @@ module.exports.LOG_Not_Found = function(req, res, next)
     console.log(Colors.RED + `NOT FOUND ${req.url}`);
     next();
 };
-
-module.exports.LOG_Created_Model = function(model_name, model)
-{
-    console.log(Colors.WHITE + `CREATED ${model_name} : ${model}`);
-};

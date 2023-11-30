@@ -1,14 +1,14 @@
 <header class="page_header">
     <a class="navbar_logo_a" href="/">
         <h1 class="navbar_logo">
-            Authorization Project
+            Auth Project
         </h1>
     </a>
     <% if (!logged_in) { %>
         <nav>
             <ul class="navbar_list">
                 <li><a href="/register">Sign up</a></li>
-                <li><a href="#">Log in</a></li>
+                <li><a href="/login">Log in</a></li>
             </ul>
         </nav>
     <% } else {%>
