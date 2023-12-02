@@ -21,6 +21,7 @@ const store = new connect_mongodb({
     collection : "sessions"
 });
 
+
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
@@ -41,6 +42,6 @@ mongoose.connect(DATABASE_URI).then(function(result)
     app.listen(port, hostname, function()
     {
         console.log(`\n\nServer successfully started at ${hostname}:${port}\n`);
-    })
+    });
 });
 

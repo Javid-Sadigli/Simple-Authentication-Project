@@ -7,7 +7,7 @@ main{
 }
 
 .welcome{
-
+    margin: 0px;
 }
 .info{
     max-width: 500px;
