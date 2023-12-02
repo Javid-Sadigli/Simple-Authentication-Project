@@ -1,0 +1,29 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.welcome{
+
+}
+.info{
+    max-width: 500px;
+    text-align: center;
+}
+.login, .logout{
+    width: 200px;
+    height: 40px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    transition: all 0.2s ease-in;
+}
+.login:hover , .logout:hover{
+    color: white;
+    background-color: black;
+}

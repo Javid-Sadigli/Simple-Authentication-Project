@@ -3,4 +3,4 @@ module.exports = {
     {
         res.status(404).send(`<h1 align="center">404 not found</h1>`);
     }
-}
+};

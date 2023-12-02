@@ -7,17 +7,27 @@ module.exports = {
         const password = req.body.password;
         const email = req.body.email;
 
-        const user = new User({
-            email: email,
-            username: username,
-            password: password
-        })
-        user.save().then(function(user)
+        User.findOne({email : email}).then(function(user) 
         {
-            res.redirect('/register');
-        }).catch(function(err)
-        {
-            console.log(err);
+            if(!user)
+            {
+                const user = new User({
+                    email: email,
+                    username: username,
+                    password: password
+                })
+                user.save().then(function(user)
+                {
+                    res.redirect('/register');
+                }).catch(function(err)
+                {
+                    console.log(err);
+                });
+            }
+            else 
+            {
+                next();
+            }
         });
     }, 
     POST_Login : function(req, res, next)
@@ -40,7 +50,7 @@ module.exports = {
             }
             else
             {
-                res.redirect('/login');
+                next();
             }
         }).catch(function(err)
         {
@@ -49,11 +59,31 @@ module.exports = {
     },
     GET_Register : function(req, res, next)
     {
-        res.render("register" , {page_title : "Register", logged_in : req.logged});
+        if(!req.logged_in)
+        {
+            res.render("register" , {page_title : "Register", logged_in : req.logged_in});
+        }
+        else 
+        {
+            next();
+        }
     },
     GET_Login : function(req, res, next)
     {
-        res.render("login" , {page_title : "Login", logged_in : req.logged});
+        if(!req.logged_in)
+        {
+            res.render("login" , {page_title : "Login", logged_in : req.logged_in});
+        }
+        else
+        {
+            next();
+        }
+    },
+    GET_Log_Out : function(req, res, next)
+    {
+        req.session.logged = false;
+        req.session.user_id = null;
+        res.redirect('/');
     },
     CHECK_Logged_In : function(req, res, next)
     {
