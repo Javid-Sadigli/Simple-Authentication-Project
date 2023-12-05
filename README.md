@@ -1,9 +1,11 @@
-# SIMPLE AUTHENTICATION PROJECT 
+# Simple Authentication project 
 In this project, the main purpose is to create a simple authentication. The plan is to use Cookies and Sessions for authentication. We will use NodeJS, ExpressJS and MongoDB for this project. 
 
 ## Table of contents 
 * [Installation](#installation)
 * [Usage](#usage)
+* [Features](#features)
+* [Contributing](#contributing)
 
 ## Installation
 For installing our project, type the following commands in your terminal : 
@@ -32,4 +34,4 @@ Contributions are welcome! Follow these steps to contribute:
 * Make your changes.
 * Submit a pull request.
 
-# Thanks for your attention! 
+### Thanks for your attention! 
