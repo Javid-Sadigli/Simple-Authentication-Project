@@ -1,0 +1,27 @@
+.logout{
+    width: 200px;
+    height: 40px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    transition: all 0.2s ease-in;
+}
+.logout:hover{
+    color: white;
+    background-color: black;
+}
+.info{
+    max-width: 500px;
+    text-align: center;
+    margin: 0px;
+
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}

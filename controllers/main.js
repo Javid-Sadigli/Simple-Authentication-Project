@@ -5,6 +5,13 @@ module.exports ={
     }, 
     GET_Profile : function(req, res, next)
     {
-        res.render('profile.ejs', {page_title : 'Profile', logged_in : req.logged_in});
+        if(req.logged_in && req.user)
+        {
+            res.render('profile.ejs', {page_title : 'Profile', logged_in : req.logged_in, user : req.user});
+        }
+        else
+        {
+            next();
+        }
     }
 };

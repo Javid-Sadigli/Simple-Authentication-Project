@@ -21,7 +21,6 @@ const store = new connect_mongodb({
     collection : "sessions"
 });
 
-
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
