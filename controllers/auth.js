@@ -81,9 +81,10 @@ module.exports = {
     },
     GET_Log_Out : function(req, res, next)
     {
-        req.session.logged = false;
-        req.session.user_id = null;
-        res.redirect('/');
+        req.session.destroy(function()
+        {
+            res.redirect('/');
+        });
     },
     CHECK_Logged_In : function(req, res, next)
     {
