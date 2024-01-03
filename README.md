@@ -15,7 +15,7 @@ cd Simple-Authentication-Project
 ```
 
 ## Usage
-For running the project, be sure that you are in the main project directory (same folder with app.js files). Then run the following commands : 
+For running the project, be sure that you are in the main project directory (same folder with app.js file). Then run the following commands : 
 ```
 npm install
 npm start
