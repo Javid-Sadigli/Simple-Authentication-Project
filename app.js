@@ -1,6 +1,6 @@
 const hostname = "localhost";
 const port = 3000;
-const DATABASE_URI = "mongodb+srv://javidsadiglimongodbclusters:N77iHw5DYi8ghjXP@simpleauthcluster.cyiedpu.mongodb.net/authdatabase?retryWrites=true&w=majority";
+const DATABASE_URI = "YOUR_MONGODB_DATABASE_URI";
 
 const mongoose = require("mongoose");
 const express = require("express");
